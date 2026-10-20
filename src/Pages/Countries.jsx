@@ -8,7 +8,7 @@ import { NoCountriesFound } from "../Components/UI/NoCountries";
 export const Countries = () => {
   const [loading, setLoading] = useState(true);
   const [countries, setCountries] = useState([]);
-  const [search, setSearch] = useState("");
+  const [appliedSearch, setAppliedSearch] = useState("");
   const [region, setRegion] = useState("All");
   const [error, setError] = useState(null);
 
@@ -16,7 +16,7 @@ export const Countries = () => {
   const filteredCountries = countries.filter((country) => {
     const searchMatch = country.names.common
       .toLowerCase()
-      .includes(search.toLocaleLowerCase().trim());
+      .includes(appliedSearch.toLocaleLowerCase().trim());
     const regionMatch = region === "All" || country.region === region;
 
     return searchMatch && regionMatch;
@@ -46,20 +46,21 @@ export const Countries = () => {
     );
 
   //While Error
-  if (error) return <NoCountriesFound data={"Failed to fetch Country Details"}/>
+  if (error)
+    return <NoCountriesFound data={"Failed to fetch Country Details"} />;
 
   // After Getting Data These Components renders
   return (
     <>
       <SearchCountries
-        search={search}
-        setSearch={setSearch}
         region={region}
         setRegion={setRegion}
+        appliedSearch={appliedSearch}
+        setAppliedSearch={setAppliedSearch}
       />
 
       {filteredCountries.length === 0 ? (
-        <NoCountriesFound data={"No Countries Found"}/>
+        <NoCountriesFound data={"No Countries Found"} />
       ) : (
         <CountriesGrid countries={filteredCountries} />
       )}

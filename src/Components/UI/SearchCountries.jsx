@@ -1,9 +1,22 @@
+import { useState } from "react";
 import world from "../../assets/images/world.webp";
 import { IoMdSearch } from "react-icons/io";
 
 const regions = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"];
 
-export const SearchCountries = ({ search, setSearch, region, setRegion }) => {
+export const SearchCountries = ({
+  region,
+  setRegion,
+  appliedSearch,
+  setAppliedSearch,
+}) => {
+  const [search, setSearch] = useState("");
+  const handleSubmitButton = (e) => {
+    e.preventDefault();
+    setAppliedSearch(search);
+    e.currentTarget.querySelector("input")?.blur();
+  };
+
   return (
     <section>
       <div
@@ -18,7 +31,7 @@ export const SearchCountries = ({ search, setSearch, region, setRegion }) => {
 
           {/* Search bar */}
           <form
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={handleSubmitButton}
             className="flex items-center gap-2 rounded-4xl bg-white py-1 pl-3 pr-1 text-black max-w-sm "
           >
             <IoMdSearch className="shrink-0 text-2xl text-gray-600" />
@@ -29,6 +42,9 @@ export const SearchCountries = ({ search, setSearch, region, setRegion }) => {
               placeholder="Search for a country..."
               className="min-w-0 flex-1 border-none bg-transparent text-sm outline-none md:text-base"
             />
+            <button className="bg-blue-600 text-white px-3 py-1.5 rounded-2xl cursor-pointer hover:bg-blue-800">
+              Search
+            </button>
           </form>
 
           {/* Region buttons */}

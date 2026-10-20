@@ -55,7 +55,6 @@ export const CountryDetails = () => {
         const data = await countryDetailApi(id);
         const detailedData = data.data.data.objects[0];
         setCountryDetail(detailedData);
-        console.log(detailedData);
       } catch (error) {
         console.log(error);
         setError(true);
