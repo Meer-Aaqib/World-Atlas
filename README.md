@@ -1,16 +1,132 @@
-# React + Vite
+# 🌍 World Atlas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Explore the world, one country at a time.
 
-Currently, two official plugins are available:
+World Atlas is a responsive web application that allows users to explore countries around the globe and discover useful information such as population, capital, region, languages, currencies, and neighboring countries.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 **Live Demo:** https://world-atlas-by-aaqib.netlify.app/
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🌎 **Explore Countries** — Browse countries from around the world.
+- 🔎 **Manual Search** — Search for a country using the search button.
+- 🗺️ **Region Filtering** — Filter countries by Africa, Americas, Asia, Europe, and Oceania.
+- 📄 **Country Details** — View detailed information about individual countries.
+- 🏳️ **Country Flags** — View country flags in the country listings and details.
+- 🌐 **Map Integration** — Open a country's location on the map.
+- 🔗 **Border Countries** — Explore neighboring countries through their detail pages.
+- 📱 **Responsive Design** — Designed to work across mobile, tablet, and desktop screens.
+- ⚡ **API Integration** — Fetch country information dynamically from the REST Countries API.
+- 🧭 **Client-Side Routing** — Navigate between pages using React Router.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **React**
+- **Tailwind CSS**
+- **React Router DOM**
+- **Axios**
+- **React Icons**
+- **Swiper**
+- **REST Countries API**
+- **Vite**
+- **Git & GitHub**
+- **Netlify**
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally.
+
+### Prerequisites
+
+- Node.js
+- npm
+- Git
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Meer-Aaqib/World-Atlas.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd World-Atlas
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL displayed in your terminal.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## 📁 Project Structure
+
+```text
+world-atlas/
+├── public/
+├── src/
+│   ├── api/
+│   ├── assets/
+│   ├── Components/
+│   ├── pages/
+│   ├── App.jsx
+│   └── main.jsx
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+*Note: The folder names above are illustrative. Adjust them to match the actual project structure.*
+
+## 🌐 API
+
+Country data is retrieved from the [REST Countries API](https://restcountries.com/).
+
+## 🚢 Deployment
+
+The application is deployed using Netlify.
+
+**Live Website:** https://world-atlas-by-aaqib.netlify.app/
+
+## 🎯 Project Goals
+
+This project was built to strengthen practical skills in React development, API integration, component-based architecture, routing, state management, responsive UI design, and deployment.
+
+## 👨‍💻 Author
+
+**Aaqib**
+
+- GitHub: [Meer-Aaqib](https://github.com/Meer-Aaqib)
+
+---
+
+If you find this project interesting, feel free to explore the repository and check out the live demo.
+
+**Made with ❤️ using React.**
