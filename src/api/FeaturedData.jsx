@@ -1,9 +1,9 @@
-import india from "../assets/images/india.jpg";
-import usa from "../assets/images/united-states.jpg";
-import japan from "../assets/images/japan.jpg";
-import brazil from "../assets/images/brazil.jpg";
-import australia from "../assets/images/australia.jpg";
-import france from "../assets/images/france.jpg";
+import india from "../assets/images/india.webp";
+import usa from "../assets/images/united-states.webp";
+import japan from "../assets/images/japan.webp";
+import brazil from "../assets/images/brazil.webp";
+import australia from "../assets/images/australia.webp";
+import france from "../assets/images/france.webp";
 
 export const featuredCountries = [
   {

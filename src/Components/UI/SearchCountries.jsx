@@ -1,5 +1,4 @@
-import { useState } from "react";
-import world from "../../assets/images/world.jpg";
+import world from "../../assets/images/world.webp";
 import { IoMdSearch } from "react-icons/io";
 
 const regions = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"];

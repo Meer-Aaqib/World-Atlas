@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import world from "../assets/images/world.jpg"; // apna path adjust karein
+import world from "../assets/images/world.webp"; 
 
 const stats = [
   { value: "250+", label: "Countries" },

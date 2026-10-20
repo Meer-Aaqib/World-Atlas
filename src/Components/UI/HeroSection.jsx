@@ -1,4 +1,4 @@
-import earth from "../../assets/images/earth.jpg";
+import earth from "../../assets/images/earth.webp";
 
 export const HeroSection = () => {
   return (
