@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode } from "swiper/modules";
+import { FreeMode, Scrollbar } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
+import "swiper/css/scrollbar";
 import { featuredCountries } from "../../api/FeaturedData";
 
 export const FeaturedCountries = () => {
@@ -13,11 +14,15 @@ export const FeaturedCountries = () => {
       </h2>
 
       <Swiper
-        modules={[FreeMode]}
+        modules={[FreeMode, Scrollbar]}
         freeMode
         grabCursor
         slidesPerView={2}
         spaceBetween={10}
+        scrollbar={{
+          draggable: true,
+          hide: false,
+        }}
         breakpoints={{
           768: { slidesPerView: 4, spaceBetween: 14 }, // tablet
           1024: { slidesPerView: 6, spaceBetween: 16 }, // desktop
